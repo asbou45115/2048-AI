@@ -19,7 +19,6 @@ gamma = 0.9  # discount factor
 epsilon = 0.1  # exploration rate
 actions_list = ['down', 'left', 'right', 'up']
 
-
 def get_game_state(driver):
     board = np.zeros((4, 4), dtype=int)
     for i in range(4):
@@ -112,7 +111,7 @@ def train_agent(process_id, q_table, num_episodes):
     driver.quit()
 
 if __name__ == '__main__':
-    num_episodes_per_agent = 100  # Number of episodes per agent
+    num_episodes_per_agent = 10  # Number of episodes per agent
     num_agents = 4  # Number of agents (parallel processes)
 
     manager = Manager()
